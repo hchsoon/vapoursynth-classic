@@ -139,9 +139,11 @@ jobs:
         py -3.12-${{ matrix.bits }} -m pip install . --no-deps -v
     - name: Build Python 3.11 plugin
       run: |
+        py -3.11-${{ matrix.bits }} -m pip install setuptools==65.6.1 -v
         py -3.11-${{ matrix.bits }} -m pip install . --no-deps -v
     - name: Build Python 3.10 plugin
       run: |
+        py -3.10-${{ matrix.bits }} -m pip install setuptools==65.6.1 -v
         py -3.10-${{ matrix.bits }} -m pip install . --no-deps -v
     - name: Build Python 3.9 plugin
       run: |
